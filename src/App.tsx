@@ -7,6 +7,7 @@ import './App.css';
 import Button from './components/atoms/Button';
 import MenuItemType from './shared/types/common';
 import Select from './components/atoms/Select';
+import TextInputField from './components/molecules/TextInputField';
 
 function App() {
 
@@ -37,7 +38,8 @@ function App() {
         </a>
         <Button name="Login" onClick={() => {}} startIcon={<DeleteIcon />}/>
         <p></p>
-        <Select label='Test' options={options}/>
+        {/* <Select label='Test' options={options}/> */}
+        <TextInputField id="sample-input" label='Login' placeHolder='Enter your email' helperText='* valid email must include .com, .vn, etc. '/>
       </header>
     </div>
   );

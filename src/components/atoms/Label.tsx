@@ -8,7 +8,7 @@ type Props = {
     error?: boolean;
 }
 
-export default function Label({required, id, label}: Props) {
+export default function Label({required, id, label, error}: Props) {
 
     const CSInputLabel = styled(InputLabel)(() => ({
         '.MuiInputLabel-root': {
@@ -16,7 +16,7 @@ export default function Label({required, id, label}: Props) {
         }
     }));
     return (
-        <CSInputLabel error required={required} shrink htmlFor={id}>
+        <CSInputLabel error={error} required={required} shrink htmlFor={id}>
         {label}
       </CSInputLabel>
     )

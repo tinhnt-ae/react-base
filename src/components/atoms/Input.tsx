@@ -7,12 +7,14 @@ type Props = {
   required?: boolean;
   disabled?: boolean;
   error?: boolean;
+  placeHolder?: string;
 };
 export default function Input({
   id,
   required,
   disabled,
   error,
+  placeHolder
 }: Props) {
 
     const BorderInput = styled(InputBase)(({ theme }) => ({
@@ -37,14 +39,13 @@ export default function Input({
         },
       }));
 
-
-
   return (
       <BorderInput
         id={id}
         error={error}
         required={required}
         disabled={disabled}
+        placeholder={placeHolder}
       />
   );
 }
